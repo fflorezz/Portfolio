@@ -1,5 +1,4 @@
 import React from "react";
-import "fontsource-roboto";
 import GlobalStyles from "../styles/GlobalStyles";
 
 const Layout = ({ children }) => {

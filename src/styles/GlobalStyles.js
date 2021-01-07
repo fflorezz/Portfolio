@@ -1,9 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import "fontsource-roboto/300.css";
-import "fontsource-roboto/400.css";
-import "fontsource-roboto/500.css";
-import "fontsource-roboto/700.css";
-import "fontsource-roboto/900.css";
 
 const GlobalStyles = createGlobalStyle`
   :root{
@@ -30,7 +25,7 @@ const GlobalStyles = createGlobalStyle`
 
   body{
     margin:0;
-    font-family: "roboto", sans-serif;
+    font-family: "roboto", Arial, Helvetica,  sans-serif;
     color:var(--black);
     background-color: #F6F6F6;
   }
