@@ -25,7 +25,7 @@ const GlobalStyles = createGlobalStyle`
 
   body{
     margin:0;
-    font-family: "roboto", Arial, Helvetica,  sans-serif;
+    font-family: Roboto, Arial, Helvetica,  sans-serif;
     color:var(--black);
     background-color: #F6F6F6;
   }
