@@ -25,7 +25,7 @@ const GlobalStyles = createGlobalStyle`
 
   body{
     margin:0;
-    font-family: Roboto, Arial, Helvetica,  sans-serif;
+    font-family: Roboto, Helvetica,  sans-serif;
     color:var(--black);
     background-color: #F6F6F6;
   }
@@ -45,19 +45,23 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1{
-    font-size: 5.6rem;
+    ${"" /* font-size: 5.6rem; */}
+    font-size: clamp(40px, 4vw, 80px)
   }
 
   h2{
-    font-size: 4.2rem;
+    ${"" /* font-size: 4rem; */}
+    font-size: clamp(30px, 3vw, 60px)
   }
 
   h3{
-    font-size: 2.8rem;
+    ${"" /* font-size: 2.6rem; */}
+    font-size: clamp(22px, 1.9vw, 40px)
   }
 
   h4{
-    font-size: 2.1rem;
+    ${"" /* font-size: 2.1rem; */}
+    font-size: clamp(18px, 1.6vw, 36px)
   }
 
   p{
