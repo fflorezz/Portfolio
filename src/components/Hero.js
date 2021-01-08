@@ -7,7 +7,7 @@ const StyledHero = styled.div`
   .container-center {
     text-align: left;
     display: inline-block;
-    margin: 40vh auto 0;
+    margin: 30vh auto 0;
   }
   & h1,
   h3,
