@@ -1,5 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import Helmet from "react-helmet";
+
+import GlobalStyles from "../styles/GlobalStyles";
+import useSiteMetadata from "./../hooks/useSiteMetadata";
 
 const StyledMain = styled.main`
   /* border: 5px solid red; */
@@ -11,7 +15,20 @@ const StyledMain = styled.main`
 console.log(StyledMain);
 
 const Layout = ({ children }) => {
-  return <StyledMain>{children}</StyledMain>;
+  const { description, title } = useSiteMetadata();
+
+  return (
+    <>
+      <GlobalStyles />
+      <Helmet>
+        <html lang="es" />
+        <meta charSet="utf-8" />
+        <meta name="description" content={description} />
+        <title>{title}</title>
+      </Helmet>
+      <StyledMain>{children}</StyledMain>
+    </>
+  );
 };
 
 export default Layout;

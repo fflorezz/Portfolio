@@ -46,7 +46,9 @@ const GlobalStyles = createGlobalStyle`
 
   h1{
     ${"" /* font-size: 5.6rem; */}
-    font-size: clamp(40px, 4vw, 80px)
+     font-size: clamp(40px, 4vw, 80px) 
+  ${"" /* font-size: clamp(4rem, 2.9615rem + 2.8846vw, 7rem); */}
+
   }
 
   h2{
