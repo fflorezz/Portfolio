@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
+import { navLinks } from "../config";
+
 import styled from "styled-components";
 
 const StyledNav = styled.nav`
@@ -19,10 +21,10 @@ const StyledLink = styled(Link)`
   color: var(--gray-light);
   cursor: pointer;
   display: block;
-  transition: all ease-in 100ms;
+  transition: var(--transitionLink);
   :hover {
     color: var(--primary);
-    transform: scale(1.1) translateY(-10%);
+    transform: var(--transformLink);
   }
 `;
 
@@ -30,16 +32,11 @@ const Nav = () => {
   return (
     <StyledNav>
       <ul>
-        <li>
-          <StyledLink>About</StyledLink>
-        </li>
-        <li>
-          <StyledLink>Proyectos</StyledLink>
-        </li>
-        <li>
-          {" "}
-          <StyledLink>Contacto</StyledLink>
-        </li>
+        {navLinks.map(({ url, name }) => (
+          <li>
+            <StyledLink to={url}>{name}</StyledLink>
+          </li>
+        ))}
       </ul>
     </StyledNav>
   );

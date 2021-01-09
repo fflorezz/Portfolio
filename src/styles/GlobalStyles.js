@@ -6,6 +6,10 @@ const GlobalStyles = createGlobalStyle`
     --black: #333333;
     --gray: #666666;
     --gray-light: #999999; 
+    --background: #F6F6F6;
+
+    --transitionLink: all ease-in 100ms;
+    --transformLink:  scale(1.1) translateY(-10%);
   }
 
   html {
@@ -28,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
     margin:0;
     font-family: Roboto, Helvetica,  sans-serif;
     color:var(--black);
-    background-color: #F6F6F6;
+    background-color: var(--background);
   }
 
   h1,
@@ -77,6 +81,7 @@ const GlobalStyles = createGlobalStyle`
   li {
     text-decoration: none;
     list-style-type: none;
+    padding:0;
   }
 
   li {

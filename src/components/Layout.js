@@ -5,6 +5,7 @@ import Helmet from "react-helmet";
 import GlobalStyles from "../styles/GlobalStyles";
 import useSiteMetadata from "./../hooks/useSiteMetadata";
 import Header from "./Header";
+import Social from "./Social";
 
 const StyledMain = styled.main`
   /* border: 5px solid red; */
@@ -28,6 +29,7 @@ const Layout = ({ children }) => {
         <title>{title}</title>
       </Helmet>
       <Header />
+      <Social />
       <StyledMain>{children}</StyledMain>
     </>
   );

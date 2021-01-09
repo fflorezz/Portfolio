@@ -6,12 +6,14 @@ import Logo from "./Logo";
 import Nav from "./Nav";
 
 const StyledHeader = styled.header`
-  max-width: 90vw;
-  width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 0;
+  /* border: solid 2px red; */
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  padding: 2rem 5% 1rem;
   display: flex;
   justify-content: space-between;
+  background-color: var(--background);
 `;
 
 const Header = () => {

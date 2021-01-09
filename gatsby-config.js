@@ -27,5 +27,13 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "config",
+        path: "./src/config.js",
+      },
+      __key: "config",
+    },
   ],
 };

@@ -8,6 +8,7 @@ const StyledHero = styled.div`
     text-align: left;
     display: inline-block;
     margin: 30vh auto 0;
+    padding-right: 10%;
   }
   & h1,
   h3,
