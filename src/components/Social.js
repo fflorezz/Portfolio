@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Icon from "./icons/Icon";
 
-import { socialMedia } from "../config";
+import useSocialMedia from "./../hooks/useSocialMedia";
 
 const StyledSocial = styled.div`
   /* border: solid red 2px; */
@@ -40,11 +40,12 @@ const StyledSocial = styled.div`
 `;
 
 const Social = () => {
+  const navLinks = useSocialMedia();
   return (
     <StyledSocial>
       <ul>
-        {socialMedia.map(({ name, url }) => (
-          <li>
+        {navLinks.map(({ name, url }) => (
+          <li key={url}>
             <a href={url} target="_blank" rel="noopener noreferrer">
               <Icon name={name} />
             </a>

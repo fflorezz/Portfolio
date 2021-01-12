@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "./button/Button";
 
 const StyledHero = styled.div`
   /* hack align center inline-block element */
@@ -28,6 +29,12 @@ const StyledHero = styled.div`
     font-weight: 400;
     color: var(--gray-light);
   }
+  .buttons {
+    margin-top: 4rem;
+    button:last-child {
+      margin-left: 1rem;
+    }
+  }
 `;
 
 const Hero = () => {
@@ -40,6 +47,10 @@ const Hero = () => {
         <h3 className="text-light">
           Diseño y desarrollo experiencias visuales para la Web.
         </h3>
+        <div className="buttons">
+          <Button text="About" color="gray-light" outline />
+          <Button text="Contacto" color="primary" />
+        </div>
       </div>
     </StyledHero>
   );

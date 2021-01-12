@@ -1,8 +1,11 @@
+const config = require("./src/config");
+
 module.exports = {
   siteMetadata: {
-    title: "Felipe Florez",
-    description:
-      "Hi, I am Felipe Florez a frontend developer and also a visual artist from Medellin Colombia. I've been working on web development like a freelancer for almost two years.",
+    title: config.title,
+    description: config.description,
+    socialMedia: config.socialMedia,
+    navLinks: config.navLinks,
   },
   plugins: [
     "gatsby-plugin-sass",

@@ -12,15 +12,15 @@ const Logo = () => {
       <text
         transform="translate(0 16)"
         fill="#343434"
-        font-size="17"
-        font-family="Montserrat-ExtraBold, Montserrat"
-        font-weight="800"
-        letter-spacing="0.25em"
+        fontSize="17"
+        fontFamily="Montserrat-ExtraBold, Montserrat"
+        fontWeight="800"
+        letterSpacing="0.25em"
       >
         <tspan x="0" y="0">
           FELIPE
         </tspan>
-        <tspan letter-spacing="0.15em">
+        <tspan letterSpacing="0.15em">
           <tspan x="0" y="20">
             FLOREZ
           </tspan>
@@ -31,7 +31,7 @@ const Logo = () => {
         transform="translate(0.5 40.527)"
         fill="none"
         stroke="#333"
-        stroke-width="2"
+        strokeWidth="2"
       />
     </svg>
   );

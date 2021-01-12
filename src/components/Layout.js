@@ -14,8 +14,6 @@ const StyledMain = styled.main`
   width: 1200px;
 `;
 
-console.log(StyledMain);
-
 const Layout = ({ children }) => {
   const { description, title } = useSiteMetadata();
 

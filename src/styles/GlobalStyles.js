@@ -3,13 +3,24 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
   :root{
     --primary:#353BDB;
+    --primary-dark:#292DA8;
     --black: #333333;
     --gray: #666666;
+    --gray-dark: #333333;
     --gray-light: #999999; 
     --background: #F6F6F6;
 
     --transitionLink: all ease-in 100ms;
     --transformLink:  scale(1.1) translateY(-10%);
+
+    --btn-md-width: 16rem;
+    --btn-md-height: 4rem;
+    --btn-md-font: 500 1.7rem roboto, sans-serif;
+
+    --btn-sm-width: 9rem;
+    --btn-sm-height: 3.3rem;
+    --btn-sm-font: 500 1.4rem roboto, sans-serif,
+
   }
 
   html {

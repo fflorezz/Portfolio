@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
-import { navLinks } from "../config";
 
 import styled from "styled-components";
+import useNavLinks from "./../hooks/useNavLinks";
 
 const StyledNav = styled.nav`
   ul {
@@ -29,11 +29,12 @@ const StyledLink = styled(Link)`
 `;
 
 const Nav = () => {
+  const navLinks = useNavLinks();
   return (
     <StyledNav>
       <ul>
         {navLinks.map(({ url, name }) => (
-          <li>
+          <li key={url}>
             <StyledLink to={url}>{name}</StyledLink>
           </li>
         ))}

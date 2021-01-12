@@ -1,4 +1,8 @@
 module.exports = {
+  title: "Felipe Florez",
+  description:
+    "Hi, I am Felipe Florez a frontend developer and also a visual artist from Medellin Colombia. I've been working on web development like a freelancer",
+
   socialMedia: [
     {
       name: "GitHub",
