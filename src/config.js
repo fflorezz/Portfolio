@@ -24,11 +24,11 @@ module.exports = {
     },
     {
       name: "Proyectos",
-      url: "/#proyectos",
+      url: "/#proyects",
     },
     {
       name: "Contacto",
-      url: "/#contacto",
+      url: "/#contact",
     },
   ],
 };

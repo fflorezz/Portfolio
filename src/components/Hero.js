@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "./button/Button";
+import useNavLinks from "./../hooks/useNavLinks";
 
 const StyledHero = styled.div`
   /* hack align center inline-block element */
@@ -31,13 +32,16 @@ const StyledHero = styled.div`
   }
   .buttons {
     margin-top: 4rem;
-    button:last-child {
+    a:last-child {
       margin-left: 1rem;
     }
   }
 `;
 
 const Hero = () => {
+  const navLinks = useNavLinks();
+  const about = navLinks.find(link => link.name === "About");
+  const contact = navLinks.find(link => link.name === "Contacto");
   return (
     <StyledHero>
       <div className="container-center">
@@ -48,8 +52,13 @@ const Hero = () => {
           Diseño y desarrollo experiencias visuales para la Web.
         </h3>
         <div className="buttons">
-          <Button text="About" color="gray-light" outline />
-          <Button text="Contacto" color="primary" />
+          <Button
+            text={about.name}
+            link={about.url}
+            color="gray-light"
+            outline
+          />
+          <Button text={contact.name} color="primary" link={contact.url} />
         </div>
       </div>
     </StyledHero>
