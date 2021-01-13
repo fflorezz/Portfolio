@@ -8,6 +8,7 @@ import Nav from "./Nav";
 const StyledHeader = styled.header`
   /* border: solid 2px red; */
   position: fixed;
+  top: 0;
   width: 100%;
   margin: 0;
   padding: 2rem 5% 1rem;

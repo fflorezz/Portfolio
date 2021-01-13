@@ -37,6 +37,9 @@ const StyledSocial = styled.div`
     margin: 0 auto;
     background-color: var(--gray);
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Social = () => {

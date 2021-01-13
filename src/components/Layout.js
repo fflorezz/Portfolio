@@ -11,7 +11,14 @@ const StyledMain = styled.main`
   /* border: 5px solid red; */
   margin: 2rem auto 4rem;
   max-width: 90vw;
-  width: 1200px;
+  width: 900px;
+
+  @media (max-width: 1200px) {
+    width: 70vw;
+  }
+  @media (max-width: 768px) {
+    width: 90vw;
+  }
 `;
 
 const Layout = ({ children }) => {

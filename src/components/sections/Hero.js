@@ -1,16 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "./button/Button";
-import useNavLinks from "./../hooks/useNavLinks";
+import Button from "../button/Button";
+import useNavLinks from "../../hooks/useNavLinks";
 
 const StyledHero = styled.div`
-  /* hack align center inline-block element */
-  text-align: center;
   .container-center {
-    text-align: left;
-    display: inline-block;
-    margin: 30vh auto 0;
-    padding-right: 10%;
   }
   & h1,
   h3,
@@ -38,13 +32,22 @@ const StyledHero = styled.div`
   }
 `;
 
+const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto 0;
+  padding-right: 10%;
+  min-height: 100vh;
+`;
+
 const Hero = () => {
   const navLinks = useNavLinks();
   const about = navLinks.find(link => link.name === "About");
   const contact = navLinks.find(link => link.name === "Contacto");
   return (
     <StyledHero>
-      <div className="container-center">
+      <StyledContainer>
         <h4>Hola, soy</h4>
         <h1>Felipe Florez.</h1>
         <h2>Frontend Developer & Artista Visual.</h2>
@@ -60,7 +63,7 @@ const Hero = () => {
           />
           <Button text={contact.name} color="primary" link={contact.url} />
         </div>
-      </div>
+      </StyledContainer>
     </StyledHero>
   );
 };

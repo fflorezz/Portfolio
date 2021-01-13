@@ -27,6 +27,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     width: 100%;
     font-size: 62.5%;
+    scroll-behavior: smooth;
   }
 
   *,
@@ -44,7 +45,13 @@ const GlobalStyles = createGlobalStyle`
     font-family: Roboto, Helvetica,  sans-serif;
     color:var(--black);
     background-color: var(--background);
+    > div{
+      margin-top:0;
+    }
+    
   }
+
+  
 
   h1,
   h2,
@@ -83,8 +90,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   p{
-    font-size: 2.6rem;
-    color: var(--gray)
+     font-size: clamp(18px, 1.6vw, 20px);
+    color: var(--gray-light)
   }
 
   a,

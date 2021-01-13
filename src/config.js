@@ -30,5 +30,9 @@ module.exports = {
       name: "Contacto",
       url: "/#contact",
     },
+    {
+      name: "CV",
+      url: "/#cv",
+    },
   ],
 };
