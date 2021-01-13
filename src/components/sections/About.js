@@ -12,12 +12,17 @@ const StyledAbout = styled.section`
     max-width: 60%;
     position: relative;
     margin-right: 4rem;
+    @media (max-width: 600px) {
+      max-width: 100%;
+      margin-right: 0;
+    }
   }
   .img-profile {
     width: 150px;
     height: 150px;
     background-color: var(--primary);
     border-radius: 50%;
+    margin: 0 auto;
   }
 
   h2:after {
