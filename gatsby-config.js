@@ -6,6 +6,7 @@ module.exports = {
     description: config.description,
     socialMedia: config.socialMedia,
     navLinks: config.navLinks,
+    skills: config.skills,
   },
   plugins: [
     "gatsby-plugin-sass",

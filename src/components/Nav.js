@@ -30,7 +30,7 @@ const StyledLink = styled(Link)`
 
 const Nav = () => {
   const navLinks = useNavLinks();
-  console.log(navLinks);
+
   return (
     <StyledNav>
       <ul>

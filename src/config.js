@@ -35,4 +35,15 @@ module.exports = {
       url: "/#cv",
     },
   ],
+  skills: [
+    "HTML5",
+    "CSS/Scss",
+    "Adobe XD",
+    "JavaScript(ES6)",
+    "React",
+    "Redux",
+    "Firebase",
+    "Node.js",
+    "Gatsby",
+  ],
 };

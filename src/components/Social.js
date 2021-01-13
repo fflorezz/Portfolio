@@ -35,7 +35,7 @@ const StyledSocial = styled.div`
     height: 10rem;
     position: relative;
     margin: 0 auto;
-    background-color: var(--gray);
+    background-color: var(--primary);
   }
   @media (max-width: 768px) {
     display: none;

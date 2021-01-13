@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Skills from "./../Skills";
 
 const StyledAbout = styled.section`
   margin-top: 10rem;
@@ -9,7 +10,7 @@ const StyledAbout = styled.section`
   align-items: center;
   scroll-margin-top: 8rem;
   .text {
-    max-width: 60%;
+    max-width: 75%;
     position: relative;
     margin-right: 4rem;
     @media (max-width: 600px) {
@@ -32,7 +33,7 @@ const StyledAbout = styled.section`
     width: 60%;
     height: 2px;
     opacity: 0.4;
-    background-color: var(--gray-light);
+    background-color: var(--primary);
     right: 0;
     top: 1.6em;
   }
@@ -44,11 +45,9 @@ const About = () => {
         <h2>About</h2>
         <p>
           Hola, soy Felipe, frontend developer y artista visual con experiencia
-          en el desarrollo de aplicaciones y sitios web.
-        </p>
-        <p>
-          Me apasiona crear atractivos productos visuales mediante interfaces
-          precisas e intuitivas, desde su concepción (UI/UX) hasta su producción
+          en el desarrollo de aplicaciones y sitios web. Me apasiona crear
+          atractivos productos visuales mediante interfaces precisas e
+          intuitivas, desde su concepción (UI/UX) hasta su producción
           (frontend).
         </p>
         <p>
@@ -57,6 +56,7 @@ const About = () => {
         </p>
       </div>
       <div className="img-profile"></div>
+      <Skills />
     </StyledAbout>
   );
 };

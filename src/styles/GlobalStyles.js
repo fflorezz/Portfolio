@@ -90,7 +90,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   p{
-     font-size: clamp(18px, 1.6vw, 20px);
+     font-size: clamp(16px, 1.6vw, 18px);
     color: var(--gray-light)
   }
 
