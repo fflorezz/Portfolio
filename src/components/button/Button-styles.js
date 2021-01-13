@@ -19,6 +19,10 @@ const StyledElement = styled.div`
     background-color: ${({ btnColor }) => `var(--${btnColor}-dark)`};
   }
   ${({ outline }) => outline && outlineButton}
+
+  @media (max-width: 460px) {
+    min-width: 12rem;
+  }
 `;
 
 const outlineButton = css`

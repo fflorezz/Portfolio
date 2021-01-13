@@ -3,19 +3,21 @@ import styled from "styled-components";
 
 const StyledAbout = styled.section`
   margin-top: 10rem;
+  margin-bottom: 10rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   scroll-margin-top: 8rem;
   .text {
     max-width: 60%;
     position: relative;
+    margin-right: 4rem;
   }
   .img-profile {
     width: 150px;
     height: 150px;
     background-color: var(--primary);
     border-radius: 50%;
-    margin-left: 4rem;
   }
 
   h2:after {
