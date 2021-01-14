@@ -3,27 +3,13 @@ import styled from "styled-components";
 import useSetCurrentSection from "../../hooks/useSetCurrentSection";
 
 import Skills from "./../Skills";
+import StyledSection from "./../../styles/StyledSection";
 
-const StyledAbout = styled.section`
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  scroll-margin-top: 8rem;
-  .text {
-    max-width: 75%;
-    position: relative;
-    margin-right: 4rem;
-    @media (max-width: 600px) {
-      max-width: 100%;
-      margin-right: 0;
-    }
-  }
-  .title {
+const StyledAbout = styled.div`
+  & .title {
     position: relative;
   }
-  h2:after {
+  & h2:after {
     content: "";
     display: block;
     position: absolute;
@@ -39,8 +25,8 @@ const About = () => {
   const ref = useSetCurrentSection("/#about");
 
   return (
-    <StyledAbout ref={ref} id="about">
-      <div className="text">
+    <StyledSection ref={ref} id="about">
+      <StyledAbout>
         <div className="title">
           <h2>About</h2>
         </div>
@@ -54,9 +40,9 @@ const About = () => {
           Estas son algunas de las tecnologías con las que he trabajado
           recientemente:
         </p>
-      </div>
+      </StyledAbout>
       <Skills />
-    </StyledAbout>
+    </StyledSection>
   );
 };
 
