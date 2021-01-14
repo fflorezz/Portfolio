@@ -4,22 +4,13 @@ import useSetCurrentSection from "../../hooks/useSetCurrentSection";
 
 import Skills from "./../Skills";
 import StyledSection from "./../../styles/StyledSection";
+import StyledTitle from "./../../styles/StyledTitle";
 
 const StyledAbout = styled.div`
-  & .title {
-    position: relative;
-  }
-  & h2:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 60%;
-    height: 2px;
-    opacity: 0.4;
-    background-color: var(--primary);
-    right: 0;
-    top: 60%;
-  }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 const About = () => {
   const ref = useSetCurrentSection("/#about");
@@ -27,9 +18,9 @@ const About = () => {
   return (
     <StyledSection ref={ref} id="about">
       <StyledAbout>
-        <div className="title">
+        <StyledTitle>
           <h2>About</h2>
-        </div>
+        </StyledTitle>
         <p>
           Desarrollador y artista visual con experiencia en el desarrollo de
           aplicaciones y sitios web. Me especializo en crear atractivos
@@ -40,8 +31,8 @@ const About = () => {
           Estas son algunas de las tecnologías con las que he trabajado
           recientemente:
         </p>
+        <Skills />
       </StyledAbout>
-      <Skills />
     </StyledSection>
   );
 };
