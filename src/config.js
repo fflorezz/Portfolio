@@ -8,13 +8,14 @@ module.exports = {
       name: "GitHub",
       url: "https://github.com/fflorezz",
     },
-    {
-      name: "Linkedin",
-      url: "https://www.linkedin.com/in/fflorezz",
-    },
+
     {
       name: "Dribbble",
       url: "https://www.dribbble.com/fflorezz",
+    },
+    {
+      name: "Linkedin",
+      url: "https://www.linkedin.com/in/fflorezz",
     },
   ],
   navLinks: [

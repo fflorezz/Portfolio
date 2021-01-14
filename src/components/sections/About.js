@@ -20,14 +20,9 @@ const StyledAbout = styled.section`
       margin-right: 0;
     }
   }
-  .img-profile {
-    width: 150px;
-    height: 150px;
-    background-color: var(--primary);
-    border-radius: 50%;
-    margin: 0 auto;
+  .title {
+    position: relative;
   }
-
   h2:after {
     content: "";
     display: block;
@@ -37,7 +32,7 @@ const StyledAbout = styled.section`
     opacity: 0.4;
     background-color: var(--primary);
     right: 0;
-    top: 1.6em;
+    top: 60%;
   }
 `;
 const About = () => {
@@ -46,20 +41,20 @@ const About = () => {
   return (
     <StyledAbout ref={ref} id="about">
       <div className="text">
-        <h2>About</h2>
+        <div className="title">
+          <h2>About</h2>
+        </div>
         <p>
-          Hola, soy Felipe, frontend developer y artista visual con experiencia
-          en el desarrollo de aplicaciones y sitios web. Me apasiona crear
-          atractivos productos visuales mediante interfaces precisas e
-          intuitivas, desde su concepción (UI/UX) hasta su producción
-          (frontend).
+          Desarrollador y artista visual con experiencia en el desarrollo de
+          aplicaciones y sitios web. Me especializo en crear atractivos
+          productos visuales mediante interfaces precisas e intuitivas, desde su
+          concepción (UI/UX) hasta su producción (frontend/backend).
         </p>
         <p>
           Estas son algunas de las tecnologías con las que he trabajado
           recientemente:
         </p>
       </div>
-      <div className="img-profile"></div>
       <Skills />
     </StyledAbout>
   );
