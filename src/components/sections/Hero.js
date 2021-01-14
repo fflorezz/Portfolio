@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../button/Button";
 import useNavLinks from "../../hooks/useNavLinks";
+import useSetCurrentSection from "../../hooks/useSetCurrentSection";
 
 const StyledHero = styled.div`
   .container-center {
@@ -45,8 +46,9 @@ const Hero = () => {
   const navLinks = useNavLinks();
   const about = navLinks.find(link => link.name === "About");
   const contact = navLinks.find(link => link.name === "Contacto");
+  const ref = useSetCurrentSection("/#hero");
   return (
-    <StyledHero>
+    <StyledHero ref={ref}>
       <StyledContainer>
         <h4>Hola, soy</h4>
         <h1>Felipe Florez.</h1>

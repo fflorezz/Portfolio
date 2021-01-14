@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import useSetCurrentSection from "../../hooks/useSetCurrentSection";
+
 import Skills from "./../Skills";
 
 const StyledAbout = styled.section`
@@ -39,8 +41,10 @@ const StyledAbout = styled.section`
   }
 `;
 const About = () => {
+  const ref = useSetCurrentSection("/#about");
+
   return (
-    <StyledAbout id="about">
+    <StyledAbout ref={ref} id="about">
       <div className="text">
         <h2>About</h2>
         <p>

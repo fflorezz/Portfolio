@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 
 import styled from "styled-components";
 import useNavLinks from "./../hooks/useNavLinks";
+import { useGlobalStateContext } from "../GlobalContext";
 
 const StyledNav = styled.nav`
   ul {
@@ -18,7 +19,7 @@ const StyledNav = styled.nav`
 const StyledLink = styled(Link)`
   font-size: 1.6rem;
   font-weight: 700;
-  color: var(--gray-light);
+  color: ${({ current }) => (current ? "var(--primary)" : "var(--gray-light)")};
   cursor: pointer;
   display: block;
   transition: var(--transitionLink);
@@ -30,13 +31,20 @@ const StyledLink = styled(Link)`
 
 const Nav = () => {
   const navLinks = useNavLinks();
+  const { currentSection } = useGlobalStateContext();
+  console.log(currentSection);
 
   return (
     <StyledNav>
       <ul>
         {navLinks.map(({ url, name }) => (
           <li key={url}>
-            <StyledLink to={url}>{name}</StyledLink>
+            <StyledLink
+              to={url}
+              current={currentSection === url ? 1 : undefined}
+            >
+              {name}
+            </StyledLink>
           </li>
         ))}
       </ul>
